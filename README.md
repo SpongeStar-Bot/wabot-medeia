@@ -1,6 +1,6 @@
 # wabot-aq
 
-Simple WhatsApp Bot
+SpongeStar WhatsApp Bot
 
 ## FOR TERMUX USER
 
