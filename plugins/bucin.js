@@ -6,7 +6,7 @@ handler.tags = ['quotes']
 handler.command = /^(bucin)$/i
 handler.owner = false
 handler.mods = false
-handler.premium = false
+handler.premium = true
 handler.group = false
 handler.private = false
 
