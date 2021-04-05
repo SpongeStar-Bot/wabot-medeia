@@ -211,7 +211,7 @@ module.exports = {
             }
           } finally {
             // m.reply(util.format(_user)) 
-            if (m.limit) m.reply(+ m.limit + ' Limit terpakai')
+            if (m.limit) m.reply(+ m.limit + ' Jangan Lupa Donasi\nCaranya Ketik #donasi/#donate')
           }
     			break
   	  	}
@@ -298,10 +298,10 @@ module.exports = {
     let chat = global.DATABASE._data.chats[m.key.remoteJid]
     if (chat.delete) return
     await this.reply(m.key.remoteJid, `
-Terdeteksi @${m.participant.split`@`[0]} telah menghapus pesan
+Wah lu @${m.participant.split`@`[0]} abis ngehapus pesan yaa~ percuma btw bakal gw balikin chat yang lu hapus
 
 Untuk mematikan fitur ini, ketik
-*.enable delete*
+*#enable delete «khusus admin»*
 `.trim(), m.message, {
       contextInfo: {
         mentionedJid: [m.participant]
@@ -313,15 +313,15 @@ Untuk mematikan fitur ini, ketik
 
 global.dfail = (type, m, conn) => {
   let msg = {
-    rowner: 'Perintah ini hanya dapat digunakan oleh _*OWWNER!1!1!*_',
+    rowner: 'Perintah ini hanya dapat digunakan oleh _*Medeia-bot-alive!*_',
     owner: 'Perintah ini hanya dapat digunakan oleh _*Owner Bot*_!',
     mods: 'Perintah ini hanya dapat digunakan oleh _*Moderator*_ !',
-    premium: 'Perintah ini hanya untuk member _*Premium*_ !',
+    premium: 'Perintah ini hanya untuk member _*Elite*_ !',
     group: 'Perintah ini hanya dapat digunakan di grup!',
     private: 'Perintah ini hanya dapat digunakan di Chat Pribadi!',
     admin: 'Perintah ini hanya untuk *Admin* grup!',
     botAdmin: 'Jadikan bot sebagai *Admin* untuk menggunakan perintah ini!',
-    unreg: 'Silahkan daftar untuk menggunakan fitur ini dengan cara mengetik:\n\n*#daftar nama.umur*\n\nContoh: *#daftar Manusia.16*'
+    unreg: 'Silahkan daftar untuk menggunakan fitur ini dengan cara mengetik:\n\n*#daftar nama.umur*\n\nContoh: *#daftar Medeia.10*'
   }[type]
   if (msg) return m.reply(msg)
 }
