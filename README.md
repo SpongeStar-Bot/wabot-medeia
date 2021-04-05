@@ -1,4 +1,4 @@
-# wabot-aq
+# wabot-medeia
 
 SpongeStar WhatsApp Bot
 
@@ -10,7 +10,7 @@ SpongeStar WhatsApp Bot
 > pkg install nodejs -y
 > pkg install ffmpeg -y
 > pkg install imagemagick -y
-> git clone https://github.com/SpongeStar-Bot/wabot-aq
-> cd wabot-aq
+> git clone https://github.com/SpongeStar-Bot/wabot-medeia
+> cd wabot-medeia
 > npm install
 ```
