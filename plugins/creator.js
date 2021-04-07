@@ -1,6 +1,6 @@
 let handler = function (m) {
   // this.sendContact(m.chat, '628872157942', 'Medeia-bot-alive', m)
-  this.sendContact(m.chat, '0', 'Insert Owner Number Here', m)
+  this.sendContact(m.chat, '628872157942', 'Owner bot Medeia-bot-alive', m)
 }
 handler.help = ['owner', 'creator']
 handler.tags = ['credits']
