@@ -78,15 +78,15 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
     }
     conn.menu = conn.menu ? conn.menu : {}
     let before = conn.menu.before || `
-*◢■■■■■■■■■■■■■◣*
-*❥${conn.user.name} *
+*◢■■■Medeia-Bot■■■◣*
+*❥${conn.user.name}*
 *❥Name: %name*
-*❥Group: %group*
-*◥■■■■■■■■■■■■■◤*
+*❥Version: %version*
+*◥■■■Medeia-Bot■■■◤*
 %readmore`
-    let header = conn.menu.header || '*❦【%category】❦*'
-    let body   = conn.menu.body   || '*❥%cmd%islimit*'
-    let footer = conn.menu.footer || '*❦【%category】❦*'
+    let header = conn.menu.header || ''
+    let body   = conn.menu.body   || ''
+    let footer = conn.menu.footer || ''
     let after  = conn.menu.after  || (conn.user.jid == global.conn.user.jid ? '' : `Powered by https://wa.me/${global.conn.user.jid.split`@`[0]}`) + `\n*%npmname@^%version*\n\`\`\`\%npmdesc\`\`\``
     let _text  = before + '\n'
     for (let tag in groups) {
