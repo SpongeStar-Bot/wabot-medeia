@@ -83,12 +83,7 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
 *❥Name: %name*
 *❥Version: %version*
 *◥■■■Medeia-Bot■■■◤*
-%readmore`
-    let header = 
-    let body   = 
-    let footer = 
-    let after  = 
-    let _text  = 
+%readmore` 
     for (let tag in groups) {
       _text += header.replace(/%category/g, tags[tag]) + '\n'
       for (let menu of groups[tag]) {
