@@ -84,11 +84,11 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
 *❥Version: %version*
 *◥■■■Medeia-Bot■■■◤*
 %readmore`
-    let header = conn.menu.header || ''
-    let body   = conn.menu.body   || ''
-    let footer = conn.menu.footer || ''
-    let after  = conn.menu.after  || (conn.user.jid == global.conn.user.jid ? '' : `Powered by https://wa.me/${global.conn.user.jid.split`@`[0]}`) + `\n*%npmname@^%version*\n\`\`\`\%npmdesc\`\`\``
-    let _text  = before + '\n'
+    let header = 
+    let body   = 
+    let footer = 
+    let after  = 
+    let _text  = 
     for (let tag in groups) {
       _text += header.replace(/%category/g, tags[tag]) + '\n'
       for (let menu of groups[tag]) {
