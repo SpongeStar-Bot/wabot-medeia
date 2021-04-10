@@ -313,10 +313,10 @@ Untuk mematikan fitur ini, ketik
 
 global.dfail = (type, m, conn) => {
   let msg = {
-    rowner: 'Perintah ini hanya dapat digunakan oleh _*Medeia-bot-alive!*_',
-    owner: 'Perintah ini hanya dapat digunakan oleh _*Owner Bot*_!',
+    rowner: 'Sorry perintah ini khusus _*Medeia-bot-alive!*_',
+    owner: 'Perintah ini khusus _*Owner Bot*_!',
     mods: 'Perintah ini hanya dapat digunakan oleh _*Moderator*_ !',
-    premium: 'Perintah ini hanya untuk member _*Premium*_ !',
+    premium: 'Lu bukan _*Eliters*_ perintah ini cuma khusus _*Eliters*_!',
     group: 'Perintah ini hanya dapat digunakan di grup!',
     private: 'Perintah ini hanya dapat digunakan di Chat Pribadi!',
     admin: 'Perintah ini hanya untuk *Admin* grup!',
