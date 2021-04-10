@@ -9,5 +9,8 @@ ${conn.getName(m.sender)} is now AFK${text ? ': ' + text : ''}
 handler.help = ['afk [alasan]']
 handler.tags = ['main']
 handler.command = /^afk$/i
+handler.premium = true
+handler.rowner = false
+handler.owner = false
 
 module.exports = handler
