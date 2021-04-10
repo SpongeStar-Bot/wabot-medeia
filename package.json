@@ -1,6 +1,6 @@
 {
   "name": "wabot-medeia",
-  "version": "0.3.5",
+  "version": "1.6.0",
   "description": "Customizable WhatsApp Bot",
   "depecrated": false,
   "main": "index.js",
