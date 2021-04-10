@@ -15,6 +15,5 @@ handler.help = ['addprems <nomor>']
 handler.tags = ['owner']
 handler.command = /^addprems$/i
 handler.rowner = true
-handler.premium = true
 
 module.exports = handler
