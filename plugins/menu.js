@@ -131,6 +131,7 @@ handler.private = false
 
 handler.admin = false
 handler.botAdmin = false
+handler.register = true
 
 handler.fail = null
 handler.exp = 3
