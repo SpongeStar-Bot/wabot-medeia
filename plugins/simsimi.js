@@ -10,4 +10,3 @@ handler.tags = ['fun']
 handler.command = /^((sim)?simi|simih)$/i
 
 module.exports = handler
-
