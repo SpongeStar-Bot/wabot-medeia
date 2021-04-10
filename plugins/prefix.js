@@ -1,10 +1,9 @@
 let handler = async (m, { conn, text }) => {
   conn.reply(m.chat, `
-*Pertanyaan:* ${m.text}
-*Jawaban:* ${pickRandom(['▶❥◈◉◊❦❧❏❐❑❒✙✚✛✜✠✢✣✤✥✦✧✩✪✫✬✭✮✯✰✱✲✳✴✵✶✷✹✺✻✼✽✾✿❀❁❂❃❅❆❇❈❉❊❋❍•❖✓✔✕✗✘♤♡♧♢♀♂■●'])}
+*Prefix:* ${pickRandom(['▶❥◈◉◊❦❧❏❐❑❒✙✚✛✜✠✢✣✤✥✦✧✩✪✫✬✭✮✯✰✱✲✳✴✵✶✷✹✺✻✼✽✾✿❀❁❂❃❅❆❇❈❉❊❋❍•❖✓✔✕✗✘♤♡♧♢♀♂■●'])}
 `.trim(), m)
 }
-handler.help = ['help']
+handler.help = ['main']
 handler.tags = ['help']
 handler.customPrefix = /(\?$)/
 handler.command = /^help$/i
