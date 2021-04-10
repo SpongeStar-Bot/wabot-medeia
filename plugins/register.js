@@ -38,7 +38,7 @@ let handler = async function (m, { text, usedPrefix }) {
 handler.help = ['daftar', 'reg', 'register'].map(v => v + ' <nama>.<umur>')
 handler.tags = ['exp']
 
-handler.command = /^(daftar|reg(ister)?)$/i
+handler.command = /^(login|daftar|reg(ister)?)$/i
 
 module.exports = handler
 
