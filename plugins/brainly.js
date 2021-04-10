@@ -10,7 +10,5 @@ handler.tags = ['internet']
 
 handler.command = /^brainly$/i
 handler.premium = true
-handler.rowner = true
-handler.owner = true
 
 module.exports = handler
