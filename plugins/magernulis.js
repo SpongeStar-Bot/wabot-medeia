@@ -1,19 +1,74 @@
-// Magernulis By MFarelS:V
-// Code by DrawlNag
-// Recode by Nurutomo :V
-let handler  = async (m, { command, conn, text }) => {
-  let id = (command.match(/[1-6]$/) || [])[0] || ''
-  await conn.sendFile(m.chat, global.API('xteam', '/magernulis' + id, {
-    text,
-    nama: conn.getName(m.sender),
-    kelas: ' '
-  }, 'APIKEY'), 'nulis.jpg', 'Tuh dah jadi\nOi DONASI lah makenya doank gak donasi', m)
+let util = require('util')
+let path = require('path')
+let { spawn } = require('child_process')
+
+// Font By MFarelS:V
+let fontPath = 'src/font/Zahraaa.ttf'
+let handler  = async (m, { conn, args }) => {
+  let inputPath ='src/kertas/magernulis1.jpg'
+  let outputPath = 'tmp/hasil.jpg'
+  let d = new Date
+  let tgl = d.toLocaleDateString('id-Id')
+  let hari = d.toLocaleDateString('id-Id', { weekday: 'long' })
+  let teks = args.join` `
+  // conn.reply(m.chat, util.format({fontPath, inputPath, outputPath, tgl, hari, teks}), m)
+  spawn('convert', [
+    inputPath,
+    '-font',
+    fontPath,
+    '-size',
+    '1024x784',
+    '-pointsize',
+    '20',
+    '-interline-spacing',
+    '1',
+    '-annotate',
+    '+806+78',
+    hari,
+    '-font',
+    fontPath,
+    '-size',
+    '1024x784',
+    '-pointsize',
+    '18',
+    '-interline-spacing',
+    '1',
+    '-annotate',
+    '+806+102',
+    tgl,
+    '-font',
+    fontPath,
+    '-size',
+    '1024x784',
+    '-pointsize',
+    '20',
+    '-interline-spacing',
+    '-7.5',
+    '-annotate',
+    '+344+142',
+    teks,
+    outputPath
+  ])
+  .on('error', e => conn.reply(m.chat, util.format(e), m))
+  .on('exit', () => {
+    conn.sendFile(m.chat, outputPath, 'nulis.jpg', 'Tuh udah jadi yee?\nJangan lupa Donasi oi', m)
+  })
 }
-handler.help = new Array(6).fill('magernulis').map((v, i) => v + (i + 1) + ' <teks>')
-handler.tags = ['nulis']
+handler.help = ['n'].map(v => v + 'ulis <teks>')
+handler.tags = ['tools']
+handler.command = /^nulis$/i
+handler.owner = false
+handler.mods = false
+handler.premium = true
+handler.group = false
+handler.private = false
 
-handler.command = /^magernulis[1-6]?$/i
+handler.admin = false
+handler.botAdmin = false
 
-handler.limit = true
+handler.fail = null
 
 module.exports = handler
+
+// BY MFARELS NJEENK
+// https://GitHub.com/MFarelS/
