@@ -7,7 +7,7 @@ CFonts.say('The Best Bot 2021', {
   align: 'center',
   gradient: ['red', 'magenta']
 })
-CFonts.say('\'Medeia-Bot-Alive\' By Alina'Medeia', {
+CFonts.say('\'wabot-medeia\' By Alina'Medeia', {
   font: 'console',
   align: 'center',
   gradient: ['red', 'magenta']
