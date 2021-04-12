@@ -4,13 +4,13 @@ let path = require('path')
 const CFonts  = require('cfonts')
 CFonts.say('The Best Bot 2021', {
   font: 'chrome',
-  align: 'right',
-  gradient: ['white', 'magenta']
+  align: 'center',
+  gradient: ['red', 'magenta']
 })
 CFonts.say('\'Medeia-Bot-Alive\' By Alina'Medeia', {
   font: 'console',
-  align: 'right',
-  gradient: ['white', 'magenta']
+  align: 'center',
+  gradient: ['red', 'magenta']
 })
 
 function start() {
@@ -18,7 +18,7 @@ function start() {
   CFonts.say([process.argv[0], ...args].join(' '), {
     font: 'console',
     align: 'center',
-    gradient: ['white', 'magenta']
+    gradient: ['red', 'magenta']
   })
   let p = spawn(process.argv[0], args, {
     stdio: ['inherit', 'inherit', 'inherit', 'ipc']
